@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Order } from 'src/app/models/order.model';
 
 @Component({
   selector: 'app-orders',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./orders.component.css']
 })
 export class OrdersComponent {
-
+  orders: Order[] = [
+    {
+      id: '1',
+      ordernb: '12345678',
+      quantity: '20'
+    },
+    {
+      id: '1',
+      ordernb: '23456789',
+      quantity: '40'
+    }
+  ];
 }
