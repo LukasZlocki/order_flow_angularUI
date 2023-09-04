@@ -1,3 +1,4 @@
+import { OrdersService } from './../../services/orders.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Order } from 'src/app/models/order.model';
@@ -10,8 +11,16 @@ import { Order } from 'src/app/models/order.model';
 export class OrdersComponent implements OnInit{
   orders: Order[] = [];
 
-  constructor(private router: Router) {}
+  constructor(private OrdersService: OrdersService, private router: Router) {}
   ngOnInit(): void {
-    
+    this.OrdersService.getAllOrders()
+      .subscribe({
+        next: (orders) => {
+          this.orders = orders;
+        },
+        error: (response) => {
+          console.log(response);
+        }
+      });
   }
 }
