@@ -14,9 +14,14 @@ export class OrdersComponent {
       quantity: '20'
     },
     {
-      id: '1',
+      id: '2',
       ordernb: '23456789',
       quantity: '40'
+    },
+    {
+      id: '3',
+      ordernb: '34567890',
+      quantity: '10'
     }
   ];
 }
