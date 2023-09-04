@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Order } from 'src/app/models/order.model';
 
 @Component({
@@ -6,22 +7,11 @@ import { Order } from 'src/app/models/order.model';
   templateUrl: './orders.component.html',
   styleUrls: ['./orders.component.css']
 })
-export class OrdersComponent {
-  orders: Order[] = [
-    {
-      id: '1',
-      ordernb: '12345678',
-      quantity: '20'
-    },
-    {
-      id: '2',
-      ordernb: '23456789',
-      quantity: '40'
-    },
-    {
-      id: '3',
-      ordernb: '34567890',
-      quantity: '10'
-    }
-  ];
+export class OrdersComponent implements OnInit{
+  orders: Order[] = [];
+
+  constructor(private router: Router) {}
+  ngOnInit(): void {
+    
+  }
 }
