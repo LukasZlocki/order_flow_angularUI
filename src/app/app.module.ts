@@ -7,6 +7,7 @@ import { OrdersComponent } from './components/orders/orders.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { AddOrderComponent } from './components/add-order/add-order.component'
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AddOrderComponent } from './components/add-order/add-order.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
