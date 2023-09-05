@@ -10,8 +10,9 @@ import { OrdersService } from 'src/app/services/orders.service';
 })
 export class AddOrderComponent {
   newOrder: OrderWriteDto = {
-    orderNumber: '',
-    quantity: ''
+    orderNumber: 0,
+    quantity: 0,
+    productNumber: ''
   };
 
   constructor(private orderService: OrdersService, private router: Router) {}

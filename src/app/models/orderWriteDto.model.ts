@@ -1,4 +1,5 @@
 export interface OrderWriteDto {
-    orderNumber: string,
-    quantity: string
+    orderNumber: number,
+    quantity: number,
+    productNumber: string
 }

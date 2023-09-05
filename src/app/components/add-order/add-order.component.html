@@ -6,11 +6,15 @@
             <form #form="ngForm" (ngSubmit)="addOrder()">
                 <div class="mb-3">
                     <label for="orderNumber" class="form-label">Order Number</label>
-                    <input type="text" class="form-control" id="orderNumber" name="orderNumber" [(ngModel)]="newOrder.orderNumber">
+                    <input type="number" class="form-control" id="orderNumber" name="orderNumber" [(ngModel)]="newOrder.orderNumber">
                 </div>
                 <div class="mb-3">
                     <label for="quantity" class="form-label">Quantity</label>
-                    <input type="text" class="form-control" id="quantity" name="quantity" [(ngModel)]="newOrder.quantity">
+                    <input type="number" class="form-control" id="quantity" name="quantity" [(ngModel)]="newOrder.quantity">
+                </div>
+                <div class="mb-3">
+                    <label for="quantity" class="form-label">Product number</label>
+                    <input type="text" class="form-control" id="productNumber" name="productNumber" [(ngModel)]="newOrder.productNumber">
                 </div>
                 <button type="submit" class="btn btn-primary">Save</button>
             </form>                
