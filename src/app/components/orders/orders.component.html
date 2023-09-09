@@ -7,6 +7,8 @@
             <th scope="col">Id</th>
             <th scope="col">Order Number</th>
             <th scope="col">Quantity</th>
+            <th></th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
@@ -14,6 +16,8 @@
             <th>{{ order.id }}</th>
             <td>{{ order.orderNumber }}</td>
             <td>{{ order.quantity }}</td>
+            <td><a [routerLink]="['/order','edit', order.id]">Edit</a></td>
+            <td><a>Details</a></td>
         </tr>
         </tbody>
     </table>
