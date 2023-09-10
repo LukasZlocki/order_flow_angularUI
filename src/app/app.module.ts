@@ -15,7 +15,7 @@ import { EditOrderComponent } from './components/edit-order/edit-order.component
     AppComponent,
     OrdersComponent,
     AddOrderComponent,
-    EditOrderComponent
+    EditOrderComponent,
   ],
   imports: [
     BrowserModule,

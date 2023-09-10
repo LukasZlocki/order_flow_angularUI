@@ -15,6 +15,7 @@ export class EditOrderComponent implements OnInit {
       quantity: 0,
       productNumber: ''
   };
+
   ngOnInit(): void {
     this.route.paramMap.subscribe({
       next: (params) => {
@@ -42,6 +43,7 @@ export class EditOrderComponent implements OnInit {
         },
         error: (err) => {
           console.log(err);
+          alert('Not able to update data !');
         }
       });
   }
