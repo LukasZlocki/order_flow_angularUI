@@ -22,4 +22,8 @@ export class OrdersService {
   getOrder(id: string): Observable<OrderWriteDto> {
     return this.http.get<OrderWriteDto>(this.baseApiUrl + '/api/order/' + id);
   }
+
+  updateOrder(id: string, updateOrderRequest: OrderWriteDto): Observable<OrderWriteDto> {
+    return this.http.put<OrderWriteDto>(this.baseApiUrl + '/api/order' + id, updateOrderRequest);
+  }
 }

@@ -10,6 +10,7 @@ import { OrderWriteDto } from 'src/app/models/orderWriteDto.model';
 })
 export class EditOrderComponent implements OnInit {
     updateOrderRequest: OrderWriteDto = {
+      id: '',
       orderNumber: 0,
       quantity: 0,
       productNumber: ''
@@ -34,6 +35,6 @@ export class EditOrderComponent implements OnInit {
     private orderService: OrdersService,
     private route: ActivatedRoute) {}
   updateOrder() {
-
+    this.orderService.updateOrder(this.updateOrderRequest.id, this.updateOrderRequest)
   }
 }

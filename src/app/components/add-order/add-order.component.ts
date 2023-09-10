@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { OrderWriteDto } from 'src/app/models/orderWriteDto.model';
+import { OrderReadDto } from 'src/app/models/orderReadDto';
 import { OrdersService } from 'src/app/services/orders.service';
 
 @Component({
@@ -9,7 +9,8 @@ import { OrdersService } from 'src/app/services/orders.service';
   styleUrls: ['./add-order.component.css']
 })
 export class AddOrderComponent {
-  newOrder: OrderWriteDto = {
+  newOrder: OrderReadDto = {
+    id: '',
     orderNumber: 0,
     quantity: 0,
     productNumber: ''
