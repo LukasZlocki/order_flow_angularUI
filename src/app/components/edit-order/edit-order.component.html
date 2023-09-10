@@ -1,1 +1,23 @@
-<p>edit-order works!</p>
+<div class="container">
+    <h1>Edit order</h1>
+    <div class="row">
+        <div class="col-6">
+
+            <form #form="ngForm" (ngSubmit)="updateOrder()">
+                <div class="mb-3">
+                    <label for="orderNumber" class="form-label">Order Number</label>
+                    <input type="number" class="form-control" id="orderNumber" name="orderNumber" [(ngModel)]="updateOrderRequest.orderNumber">
+                </div>
+                <div class="mb-3">
+                    <label for="quantity" class="form-label">Quantity</label>
+                    <input type="number" class="form-control" id="quantity" name="quantity" [(ngModel)]="updateOrderRequest.quantity">
+                </div>
+                <div class="mb-3">
+                    <label for="quantity" class="form-label">Product number</label>
+                    <input type="text" class="form-control" id="productNumber" name="productNumber" [(ngModel)]="updateOrderRequest.productNumber">
+                </div>
+                <button type="submit" class="btn btn-primary">Update</button>
+            </form>                
+        </div>
+    </div>
+</div>

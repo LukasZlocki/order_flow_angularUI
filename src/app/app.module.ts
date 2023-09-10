@@ -8,12 +8,14 @@ import { OrdersComponent } from './components/orders/orders.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddOrderComponent } from './components/add-order/add-order.component'
 import { FormsModule } from '@angular/forms';
+import { EditOrderComponent } from './components/edit-order/edit-order.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OrdersComponent,
-    AddOrderComponent
+    AddOrderComponent,
+    EditOrderComponent
   ],
   imports: [
     BrowserModule,
