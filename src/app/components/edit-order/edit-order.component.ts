@@ -36,5 +36,13 @@ export class EditOrderComponent implements OnInit {
     private route: ActivatedRoute) {}
   updateOrder() {
     this.orderService.updateOrder(this.updateOrderRequest.id, this.updateOrderRequest)
+      .subscribe({
+        next: (response) => {
+          this.router.navigate(['orders']);
+        },
+        error: (err) => {
+          console.log(err);
+        }
+      });
   }
 }
