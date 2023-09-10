@@ -26,6 +26,7 @@ export class AddOrderComponent {
         },
         error: (response) => {
           console.log(response);
+          alert('Not able to create new order !');
         }    
       });
   }
